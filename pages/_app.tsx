@@ -6,20 +6,25 @@ import { AppProps } from 'next/app';
 import Header from 'src/components/layout/Header';
 import { Col, Container, Row } from 'react-bootstrap';
 import Footer from 'src/components/layout/Footer';
+import Sidebar from 'src/components/layout/Sidebar';
 // import './App.scss';
 
 const MyApp = ({ Component, pageProps }:AppProps) => {
   return (
     <StoreProvider>
+      <Header />
       <Container fluid>
-        <Header />
-        <Row className="mt-5">
-          <Col sm={2} />
-          <Col sm={8}>
-            <Component {...pageProps} />
+        <Row>
+          <Col xs={3} id="sidebar-wrapper">
+            <Sidebar />
           </Col>
-          <Col sm={2} />
+          <Col xs={9}>
+            <Row className="mt-5 ml-3">
+              <Component {...pageProps} />
+            </Row>
+          </Col>
         </Row>
+
         <Footer />
       </Container>
     </StoreProvider>

@@ -3,10 +3,10 @@ import React from 'react';
 function Footer() {
   return (
   // <!-- Footer -->
-    <footer className="page-footer font-small mdb-color darken-3 pt-4">
+    <footer style={{ background: 'black' }}>
 
       {/* <!-- Footer Elements --> */}
-      <div className="container">
+      <div className="container-fluid">
 
         {/* <!--Grid row--> */}
         <div className="row d-flex justify-content-center">
@@ -21,7 +21,7 @@ function Footer() {
 
       {/* <!-- Copyright --> */}
       <div className="footer-copyright text-center py-3">© 2020 Copyright:
-        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+        <a href="https://mdbootstrap.com/"> Van Dong</a>
       </div>
       {/* <!-- Copyright --> */}
 

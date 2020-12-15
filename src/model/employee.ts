@@ -7,7 +7,17 @@ const EmployeeBaseModel = types.model('EmployeeBase', {
   level: types.optional(types.number, 0),
   year: types.optional(types.number, 0),
   position: types.optional(enumPosition, 'staff'),
-});
+}).actions((self) => ({
+  setLevel(level:number) {
+    self.level = level;
+  },
+  setYear(year:number) {
+    self.year = year;
+  },
+  setPosition(position:TPostion) {
+    self.position = position;
+  },
+}));
 
 export type TPostion = SnapshotOut<typeof enumPosition>;
 export const PositionType = [{ label: 'Quản lý', value: 'manager' }, { label: 'Nhân viên', value: 'staff' }];
